@@ -1,4 +1,6 @@
-flatiron-ipsum
+acadame ipsum
 ==============
 
-Code to create a lorem ipsum text generator with words related to the Flatiron School. Uses JavaScript and jQuery only.
+lorem ipsum text generator for the K-12 and higher education sector.
+
+forked from flatiron-ipsum by @meowist
