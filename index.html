@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Flatiron Ipsum</title>
+	<title>Academe Ipsum</title>
+
+	<script src="//use.edgefonts.net/lato:n4,i4,n7.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -10,34 +12,57 @@
 </head>
 	
 <body>
+<svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-graduation" viewBox="0 0 1024 1024">
+	<title>graduation</title>
+	<path class="path1" d="M169.062 626.586c23.757 96.307 53.965 138.291 154.726 182.374 100.813 44.032 148.685 92.16 188.211 92.16s84.326-42.086 185.139-86.221c100.813-43.981 73.933-57.498 97.69-153.702l-282.829 137.523-342.938-172.134zM998.963 375.603l-426.24-238.694c-33.382-18.688-88.013-18.688-121.395 0l-426.291 238.694c-33.382 18.688-33.382 49.306 0 67.994l426.24 238.694c33.382 18.688 88.013 18.688 121.395 0l275.558-154.317-298.803-69.99c-11.469 2.867-24.115 4.454-37.427 4.454-53.811 0-97.434-25.958-97.434-57.958s43.622-58.010 97.434-58.010c41.779 0 77.363 15.718 91.187 37.683l316.467 103.834 79.309-44.39c33.382-18.688 33.382-49.306 0-67.994zM868.71 828.006c-3.226 19.61 65.69 52.019 72.243-5.581 29.645-259.635-21.299-334.387-21.299-334.387l-71.424 39.987c0-0.051 60.57 57.6 20.48 299.981z"></path>
+</symbol>
+</defs>
+</svg>
 
-<img src = "fi.png" style = "border-bottom: 1px white solid;">
+<header>
+	<div class="container">
+	<div class="logo"><svg class="icon-graduation"><use xlink:href="#icon-graduation"></use></svg></div>	
+	<h1>Academe Ipsum</h1>
+	<p class="lede">A dummy text generator for the education sector. K-12 and Higher Ed flavors both available. All in good fun.</p>
+	</div>
+</header>
 
-<p>How much nonsense would you like?</p>
+<div class="main container">
+<p>I started making this to generate placeholder copy to test out HTML email designs and paragraph styles. Please remember a much better practice is to base your designs around <a href="http://meetcontent.com/blog/higher-ed-live-recap-a-content-first-approach-to-higher-ed-web/">actual</a>, or at least <a href="http://www.markboulton.co.uk/journal/structure-first-content-always">structured content</a>.</p>
+
+<h2>How much academese would you like?</h2>
 
 		<form id="ipsum-form" action="#" method="post">
-			Paragraphs: <input id="paragraph_count" style="width: 25px;" type="text" maxlength="2" /><br>
-			Type:
+			<p>Number of paragraphs: <input id="paragraph_count" style="width: 25px;" type="text" maxlength="2" /></p>
+			<p>Please select a flavor:
 
-						<!-- default choice on load -->
-						<input id="default" type="radio" name="choice" value="default" style="display:none" />
-						<!-- straight up -->
-						<input id="straight-up" type="radio" name="choice" value="straight-up" checked />
-						<label for="straight-up">Straight Up</label> 
-						<!-- all bob -->
-						<input id="all-bob" type="radio" name="choice" value="all-bob" />
-						<label for="all-bob">All Bob</label> 
-						<!-- no bob -->
-						<input id="no-bob" type="radio" name="choice" value="no-bob" />
-						<label for="no-bob">No Bob</label><br>
+				<ul class="radio">
+
+				<li>	<!-- default choice on load -->
+						<input id="default" type="radio" name="choice" value="default" style="display:none" /></li>
+						<!-- Regular version -->
+				<li>	<input id="plain" type="radio" name="choice" value="Regular" checked />
+						<label for="plain">Plain vanilla version</label></li> 
+						<!-- K-12 version -->
+				<li>	<input id="k12" type="radio" name="choice" value="K-12" />
+						<label for="k12">K-12 version</label> </li>
+						<!-- Higher Ed version -->
+				<li>	<input id="highed" type="radio" name="choice" value="higher ed" />
+						<label for="highed">Higher Education version</label></li>
+					</ul>
 						<!-- submit button -->
-						<input type="submit" id="submit" value="Submit" />
+						<input type="submit" id="submit" value="Submit" /></p>
 		</form>
 
 		<div id="print-paragraphs"></div>
+</div>
+<footer class="footer container">
+	<p>Source: forked from <a href="https://github.com/meowist/flatiron-ipsum">@meowist</a>. </p>
+	<p>Inspired by <a href="http://baconipsum.com/">Bacon Ipsum</a>, <a href="http://saganipsum.com/">Sagan Ipsum</a>, and <a href="http://idsgn.dropmark.com/107">countless other</a> dummy text generators.</p></footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.8.0.min.js"><\/script>')</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/ipsum.js"></script>
 
 </body>

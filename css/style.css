@@ -48,59 +48,139 @@ table {
 
 /*Start Map CSS*/
 body{
-background-color:#333333;
-color:#ffffff;
+background-color:#fdfcee;
+color:#282932;
 font-size: 1em;
 line-height: 1.5em;
 font-weight:300px;
-font-family: 'Quattrocento Sans', sans-serif;
+font-family: lato, Verdana, Geneva, sans-serif;
 margin: 0 auto;
-width: 750px;
+width: 100%;
 }
 
 header {
-  margin-top: 1em;
+  background-color: #fbac1d;
+  padding-top: 1.5em;
+  padding-bottom: .75em;
 }
 
 h1 {
-font-size: 2em;
+font-size: 2.5em;
 margin-bottom: .5em;
 line-height: 1em;
 font-weight: bold;
 padding-right: 3px;
+color: #fff;
 /*text-shadow: 1px 1px 1px #555;*/
 }
 
 h2 {
-font-size: 1em;
+font-size: 1.35em;
 line-height: 1.5em;
-margin-bottom: 1em;
+margin-bottom: .15em;
 }
-
-#print-paragraphs {
-	margin-top: 20px;
-	margin-bottom: 40px;
-}
-
-
 
 strong {
   font-weight: bold;
-  color: #C43512;
+  color: #282932;
+}
+
+a {
+  color: #893201;
+}
+
+a:hover{
+  color: #cb8f1a;
+}
+
+a:visited {
+  color: #893201;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.logo {
+  width: 2em;
+  height: 2em;
+  padding: .9em .9em;
+  background-color: #cb8f1a;
+  border-radius: 100%;
+  color: #282932;
+  margin-bottom: .5em;
+}
+
+.icon-graduation {
+  color: #282932;  
+}
+
+.lede {
+  font-size: 1.25em;
+}
+
+.main {
+  margin-top: 2.5em;
 }
 
 
+.footer {
+  border-top: 1px solid #eaa52c;
+  padding-top: .8275em;
+  font-size: .8275em;
+}
+
+
+#print-paragraphs {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 #submit {
-    background-color: #C43512;
+    background-color: #cb8f1a;
     border: medium none;
     border-radius: 5px 5px 5px 5px;
     color: #F2F2F2;
     font-size: 1em;
     margin-top: 1em;
+    margin-left: 1em;
     padding: 2px;
     width: 75px;
 }
 
+@media (min-width: 440px) {
+
+ .logo {
+  margin-right: 1.15em;
+  float: left;
+  margin-top: -.75em;
+ }
+
+}
+
+@media (min-width: 580px) {
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .logo {
+     margin-top: -5px;
+     width: 2.75em;
+    height: 2.75em;
+    padding: .9em .9em;
+  }
+
+  .radio li {
+   display: table;
+   display: inline-block;
+   margin-right: 10px;
+  }
+
+}
 
 
 

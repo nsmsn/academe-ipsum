@@ -17,20 +17,29 @@ $("#ipsum-form").submit(function() {
   var words = [];
 
 //Create an array of words to randomize later
+  var words_plain = ["rigorous", "learning outcomes", "rubric", "matrix", "audit", "analysis", "supplementary materials", "textbooks", "exams", "evaluations", "flipped classroom", "plagiarism", "discipline", "critical", "analytical", "methodologies", "learning accommodations", "service learning", "service leadership", "differentiated", "mastery", "self-paced", "project-based", "effectiveness", "performance", "assessment", "data-driven", "common core", "creativity", "research", "innovation", "Blackboard", "cost of living adjustments", "analytics", "remediation", "student-centered", "lifelong learner", "retention", "task force", "STEM", "mission", "values", "community", "collaborate", "experiential", "graduation", "retention", "access", "intentional", "vision statement", "guiding image", "accreditation", "process", "educational technology", "evaluation", "curriculum", "pedagogy", "achievement gap", "competitive", "library", "future", "performance-based outcomes", "community", "ROI", "budget", "framework", "heuristic", "mentor", "peer group"];
+  var words_k12 = [ "homework", "personalized", "IEP", "enrichment", "cooperative learning",  "bell to bell instruction", "spiraled curriculum", "cognitive distribution", "problem-based", "mindmap", "data retreat", "high yield strategies", "formative assessment", "professional learning communities", "peer content teams", "compulsory", "parent teacher conference", "guidance counselor", "reform", "tutelage", "superintendent", "inclusion", "aptitude", "ACT", "SAT", "standardized", "in-service", "NCLB", "high-touch" ];
+  var words_highed = [ "prerequisite", "sabbatical", "hackademic", "communities of practice", "tenure-track", "Academic Integrity", "advancing", "contextual understanding", "nuanced views", "office hours", "academic freedom", "MOOC", "enterprise", "funding model", "formula funding", "expenditures", "scholarship", "student loans", "strategic plan", "org chart", "alumni development", "development", "research initiatives", "employee relations", "HBCU", "governance", "IPEDS", "gainful employment", "post-secondary", "faculty", "research", "gen ed", "transformative", "attainment", "access", "public service", "experiential learning", "bursar", "registrar", "provost", "dean",  "thesis", "search committee", "program integrity", "state authorization", "concurrent enrollment", "trustees", "nontraditional", "adjunct", "liberal arts", "humanities", "core values", "civic responsibility", "involvement", "social responsibility", "FERPA", "FAFSA", "HIPAA", "MOOCs", "professor", "tuition and fees", "tuition increases", "campus", "tenure", "connectivity", "viral", "approachability", "project in lieu of thesis", "rankings"];
+
+
+
+
   var words_bob = ["bob", "reginald t moneybags", "mc hammer", "vanilla ice", "@withloudhands", "remote-control helicopters", "kill your idols", "github hoodie", "i don't care"];
   var words_nobob = ["sunac", "rails", "febreze", "feelings friday", "drilling", "sinatra", "brita", "pizza", "beer", "number seven subs", "smoothie", "blue dog cafe", "shit avi says", "friday after flatiron"];  
-  var words_all = words_bob.concat(words_nobob);
+  
+  var words_k12flavor = words_plain.concat(words_k12);
+  var words_heflavor = words_plain.concat(words_highed);
 
 //ELSE IF determines which array of words to show the user
-  if (chosen_button == "straight-up") {
-   words = words_all;
-} else if (chosen_button == "all-bob") {
-   words = words_bob; 
+  if (chosen_button == "highed") {
+   words = words_heflavor;
+} else if (chosen_button == "k12") {
+   words = words_k12flavor; 
 } else {
-words = words_nobob; }
+   words = words_plain; }
 
 //Vary the number of sentences in each paragraph randomly
-var sentence_number = Math.floor( (Math.random()+4) * 2 );
+var sentence_number = Math.floor( (Math.random()+1) );
 
 //Use a function that randomizes the contents of an array
   function fisherYates(words) {
